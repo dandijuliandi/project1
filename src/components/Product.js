@@ -2,6 +2,7 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Rating from '../components/Rating.js';
+import { numberFormat } from '../helpers';
 
 function Product({ product }) {
     return (
@@ -12,7 +13,7 @@ function Product({ product }) {
                     <Link to={`/product/${product._id}`}>
                         <Card.Title className='mt-3'><strong>{product.name}</strong> </Card.Title>
                     </Link>
-                    <Card.Subtitle className='mt-3'>Rp. {product.price}</Card.Subtitle>
+                    <Card.Subtitle className='mt-3'>Rp. {numberFormat(product.price)}</Card.Subtitle>
                     <div className="d-block mt-3">
                         <Rating stars={product.rating}></Rating>
                     </div>

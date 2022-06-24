@@ -15,8 +15,12 @@ function Header() {
                 <Navbar.Toggle aria-controls='basic-navbar-nav'></Navbar.Toggle>
                 <Navbar.Collapse id='basic-navbar-nav'>
                     <Nav className="ml-auto">
-                        <Nav.Link> <FontAwesomeIcon icon={faShoppingCart}/> Chart </Nav.Link>
-                        <Nav.Link><FontAwesomeIcon icon={faUser}/> Login</Nav.Link>
+                        <LinkContainer to={'/chart'}>
+                            <Nav.Link> <FontAwesomeIcon icon={faShoppingCart}/> Chart </Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to={'/chart'}>
+                            <Nav.Link><FontAwesomeIcon icon={faUser}/> Login</Nav.Link>
+                        </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
